@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Untitled Page</title>
+    
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            width: 30%;
+            height: 396px;
+        }
+        .style3
+        {
+            height: 396px;
+        }
+        .style4
+        {
+            height: 117px;
+        }
+        .style5
+        {
+            height: 113px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    
+    
+        
+        
+            <table class="style1">
+                <tr>
+                    <td colspan="2" class="style4">
+                        <asp:ContentPlaceHolder id="Banner" runat="server"> </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style2" style="vertical-align:top;">
+                        <asp:ContentPlaceHolder id="LeftMenu" runat="server"></asp:ContentPlaceHolder>
+                    </td>
+                    <td class="style3" style="vertical-align:top;">
+                        <asp:ContentPlaceHolder id="MainContent" runat="server"></asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="style5">
+                        Footer</td>
+                </tr>
+            </table>
+        
+        
+    </div>
+    </form>
+</body>
+</html>

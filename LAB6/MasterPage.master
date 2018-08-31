@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register src="Banner.ascx" tagname="Banner" tagprefix="uc1" %>
+<%@ Register src="Category.ascx" tagname="Category" tagprefix="uc2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: 410px;
+            border-style: solid;
+            border-width: 1px;
+        }
+        .auto-style2 {
+            height: 87px;
+        }
+        .auto-style5 {
+            vertical-align:top;
+            width: 707px;
+        }
+        .auto-style6 {
+            width: 81%;
+            height: 410px;
+            border-style: solid;
+            border-width: 1px;
+        }
+        .auto-style7 {
+            width: 109px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table border="1" class="auto-style6">
+            <tr>
+                <td class="auto-style2" colspan="2">
+                    <uc1:Banner ID="Banner1" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style7">
+                    <uc2:Category ID="Category1" runat="server" />
+                </td>
+                <td class="auto-style5">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

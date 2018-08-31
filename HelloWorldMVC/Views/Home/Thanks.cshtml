@@ -1,0 +1,51 @@
+﻿@model HelloWorldMVC.Models.GuestRespone
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+</head>
+<body>
+    @{ 
+        try
+        {
+            WebMail.SmtpServer = "smtp.gmail.com";
+            WebMail.SmtpPort = 587;
+            WebMail.EnableSsl = true;
+            WebMail.UserName = "khaikv@gmail.com";
+            WebMail.Password = "23423";
+            WebMail.From = "khaikv@gmail.com";
+            WebMail.Send(Model.Email,"Moi ban mai den uong bia","Moi ban" + Model.Name + "den uong bia");
+        }
+        catch (Exception)
+        {
+
+            @: <b>Loi khi gui mail</b>
+        }
+    }
+
+
+    <div>
+        <p>Your name: @Model.Name</p>
+        <p>Your email: @Model.Email</p>
+        <p>Your phone: @Model.Phone</p>
+        <p>Will you attend: @Model.WillAttend</p>
+        <p>
+            @if (true == Model.WillAttend)
+            {
+                @: Thank you for send email
+            }
+            else
+            {
+                @: OK. I am fine
+            }
+        </p>
+    </div>
+</body>
+</html>

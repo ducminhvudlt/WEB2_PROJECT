@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            border-style: solid;
+            border-width: 1px;
+            height: 338px;
+        }
+        .auto-style2 {
+            height: 258px;
+        }
+        .auto-style3 {
+            width: 966px;
+            height: 82px;
+        }
+        .auto-style4 {
+            height: 85px;
+            vertical-align: top;
+        }
+        .auto-style5 {
+            width: 459px;
+            height: 279px;
+        }
+        .auto-style6 {
+            width: 1485px;
+            vertical-align: top;
+        }
+        .auto-style8 {
+            height: 258px;
+            width: 267px;
+            vertical-align:top;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+
+        <table class="auto-style1">
+            <tr>
+                <td colspan="3">
+                    <img class="auto-style3" src="Image/banner.jpg" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style8" rowspan="2">
+                    <asp:Menu ID="Menu1" runat="server">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/User.aspx" Text="Home page" Value="Home page"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/RecentyFriend.aspx" Text="Recently Friends" Value="Recently Friends"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/InvitingFriend.aspx " Text="Inviting Friends" Value="Inviting Friends"></asp:MenuItem>
+                            <asp:MenuItem ImageUrl="~/Request.aspx" Text="Request" Value="Request"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+                <td class="auto-style6" rowspan="2">
+
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+
+                </td>
+                <td class="auto-style4">WELCOME:&nbsp; <asp:Label ID="lblUserName" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click">Log out</asp:LinkButton>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                    <img class="auto-style5" src="Image/fb.jpg" /></td>
+            </tr>
+        </table>
+
+    </div>
+    </form>
+</body>
+</html>
